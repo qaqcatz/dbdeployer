@@ -1,0 +1,50 @@
+[
+  {
+    "name": "mysql",
+    "user": "root",
+    "password": "123456",
+    "port": "3306",
+    "versions": [
+      {
+        "name": "5.0.15",
+        "urlPrefix": "https://downloads.mysql.com/archives/get/p/23/file/",
+        "fileNames": [
+          "MySQL-server-5.0.15-0.glibc23.x86_64.rpm",
+          "MySQL-client-5.0.15-0.glibc23.x86_64.rpm",
+          "MySQL-shared-5.0.15-0.glibc23.x86_64.rpm"
+        ],
+        "meta": "meta1",
+        "env": "env1"
+      },
+      {
+        "name": "5.0.16",
+        "urlPrefix": "https://downloads.mysql.com/archives/get/p/23/file/",
+        "fileNames": [
+          "MySQL-server-5.0.16-0.glibc23.x86_64.rpm",
+          "MySQL-server-5.0.16-0.glibc23.x86_64.rpm",
+          "MySQL-shared-5.0.16-0.glibc23.x86_64.rpm"
+        ],
+        "meta": "meta1",
+        "env": "env1"
+      }
+    ]
+  },
+  {
+    "name": "mariadb",
+    "versions": [
+
+    ]
+  },
+  {
+    "name": "tidb",
+    "versions": [
+
+    ]
+  },
+  {
+    "name": "oceanbase",
+    "versions": [
+
+    ]
+  }
+]
