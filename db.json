@@ -1,50 +1,534 @@
 [
   {
     "name": "mysql",
-    "user": "root",
-    "password": "123456",
-    "port": "3306",
-    "defaultDB": "qaqcatz",
-    "versions": [
+    "port": 3306,
+    "extraDockerRun": "-e MYSQL_ROOT_PASSWORD=123456 --privileged=true",
+    "waitForReady": "mysql -u root --password=123456 -e \"SELECT 1\"",
+    "images": [
       {
-        "name": "5.0.15",
-        "urlPrefix": "https://downloads.mysql.com/archives/get/p/23/file/",
-        "fileNames": [
-          "MySQL-server-5.0.15-0.glibc23.x86_64.rpm",
-          "MySQL-client-5.0.15-0.glibc23.x86_64.rpm",
-          "MySQL-shared-5.0.15-0.glibc23.x86_64.rpm"
-        ],
-        "meta": "meta1",
-        "env": "env1"
+        "repo": "vettadock/mysql-old",
+        "tag": "4.1",
+        "extraDockerRun": "--privileged=true",
+        "waitForReady": "mysql -u root -e \"SELECT 1\"",
+        "initDockerExecs": [
+          "mysql -u root -e \"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456'; FLUSH PRIVILEGES;\""
+        ]
       },
       {
-        "name": "5.0.16",
-        "urlPrefix": "https://downloads.mysql.com/archives/get/p/23/file/",
-        "fileNames": [
-          "MySQL-server-5.0.16-0.glibc23.x86_64.rpm",
-          "MySQL-client-5.0.16-0.glibc23.x86_64.rpm",
-          "MySQL-shared-5.0.16-0.glibc23.x86_64.rpm"
-        ],
-        "meta": "meta1",
-        "env": "env1"
+        "repo": "vettadock/mysql-old",
+        "tag": "5.0",
+        "extraDockerRun": "--privileged=true",
+        "waitForReady": "mysql -u root -e \"SELECT 1\"",
+        "initDockerExecs": [
+          "mysql -u root -e \"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456'; FLUSH PRIVILEGES;\""
+        ]
+      },
+      {
+        "repo": "vettadock/mysql-old",
+        "tag": "5.1",
+        "extraDockerRun": "--privileged=true",
+        "waitForReady": "mysql -u root -e \"SELECT 1\"",
+        "initDockerExecs": [
+          "mysql -u root -e \"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456'; FLUSH PRIVILEGES;\""
+        ]
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.40"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.40"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.41"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.42"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.43"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.44"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.45"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.46"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.47"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.48"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.49"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.50"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.51"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.52"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.53"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.54"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.55"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.56"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.57"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.58"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.59"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.60"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.61"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.5.62"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.17"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.20"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.21"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.22"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.23"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.24"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.25"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.26"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.27"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.28"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.29"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.30"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.31"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.32"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.33"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.34"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.35"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.36"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.37"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.38"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.39"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.40"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.41"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.42"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.43"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.44"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.45"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.46"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.47"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.48"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.49"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.50"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.6.51"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.4"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.5"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.6"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.7"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.8"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.9"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.10"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.11"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.12"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.13"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.14"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.15"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.16"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.17"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.18"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.19"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.20"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.21"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.22"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.23"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.24"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.25"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.26"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.27"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.28"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.29"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.30"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.31"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.32"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.33"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.34"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.35"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.36"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.37"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.38"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.39"
+      },
+      {
+        "repo": "mysql",
+        "tag": "5.7.40"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.0"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.1"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.2"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.3"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.4"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.11"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.12"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.13"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.14"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.15"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.16"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.17"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.18"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.19"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.20"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.21"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.22"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.23"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.24"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.25"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.26"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.27"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.28"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.29"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.30"
+      },
+      {
+        "repo": "mysql",
+        "tag": "8.0.31"
       }
     ]
   },
   {
     "name": "mariadb",
-    "versions": [
+    "images": [
 
     ]
   },
   {
     "name": "tidb",
-    "versions": [
+    "images": [
 
     ]
   },
   {
     "name": "oceanbase",
-    "versions": [
+    "images": [
 
     ]
   }

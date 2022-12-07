@@ -3,57 +3,47 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/qaqcatz/nanoshlib"
 	"github.com/sirupsen/logrus"
 	"io"
 	"io/ioutil"
 	"os"
-	"path"
-	"path/filepath"
+	"strconv"
 	"time"
 )
 
 const (
 	gDBJsonPath string = "./db.json"
-	gDockerDBPath string = "./dockerdb"
-	gSudoPasswordPath string = "./sudoPassword.txt"
-	gDownloadPath string = "./download"
-	gImagePrefix string = "qaqcatz"
-	gContainerPrefix string = "qaqcatz"
+	gContainerPrefix string = "test"
+	gUser string = "root" // do not modify
+	gPassword string = "123456" // do not modify
+	gMaxReadyTry int = 16
 )
 
 var (
-	gSudoPasswordPipe = ""
 	gDBMSs []*DBMS = nil
 )
 
 func init() {
-	if pathExists(gSudoPasswordPath) {
-		absPath, err := filepath.Abs(gSudoPasswordPath)
-		if err != nil {
-			panic("get abs of " + gSudoPasswordPath + " error")
-		}
-		gSudoPasswordPipe = "cat " + absPath + " | "
-	}
 	gDBMSs = readDBJson()
 }
 
 type DBMS struct {
 	Name string `json:"name"`
-	User string `json:"user"`
-	Password string `json:"password"`
-	Port string `json:"port"`
-	DefaultDB string `json:"defaultDB"`
-	Versions []*Version `json:"versions"`
-	versionMap map[string]*Version // version name -> version
+	Port int `json:"port"`
+	ExtraDockerRun string `json:"extraDockerRun"`
+	WaitForReady string `json:"waitForReady"`
+	InitDockerExecs []string `json:"initDockerExecs"`
+	Images []*Image `json:"images"`
+	imageMap map[string]*Image // image repo:image tag -> *Image
 }
 
-type Version struct {
-	Name string `json:"name"`
-	UrlPrefix string `json:"urlPrefix"`
-	FileNames []string `json:"fileNames"`
-	Meta string `json:"meta"`
-	Env string `json:"env"`
+type Image struct {
+	Repo string `json:"repo"`
+	Tag string `json:"tag"`
+	ExtraDockerRun string `json:"extraDockerRun"`
+	WaitForReady string `json:"waitForReady"`
+	InitDockerExecs []string `json:"initDockerExecs"`
+	DockerExecs []string `json:"dockerExecs"`
 }
 
 func readDBJson() []*DBMS {
@@ -78,15 +68,15 @@ func findDBMS(specDbms string) *DBMS {
 	return nil
 }
 
-func (dbms *DBMS) findVersion(specVersion string) *Version {
-	if dbms.versionMap == nil {
-		dbms.versionMap = make(map[string]*Version)
-		for _, version := range dbms.Versions {
-			dbms.versionMap[version.Name] = version
+func (dbms *DBMS) findImage(specImage string) *Image {
+	if dbms.imageMap == nil {
+		dbms.imageMap = make(map[string]*Image)
+		for _, image := range dbms.Images {
+			dbms.imageMap[image.Repo+":"+image.Tag] = image
 		}
 	}
-	if version, ok := dbms.versionMap[specVersion]; ok {
-		return version
+	if image, ok := dbms.imageMap[specImage]; ok {
+		return image
 	}
 	return nil
 }
@@ -97,43 +87,33 @@ func (dbms *DBMS) findVersion(specVersion string) *Version {
 //
 // (2) dbdeployer ls dbms
 //
-// Show all supported version under a DBMS.
-// For example, if you use `ls mysql`, you will see 5.0.15, 5.0.16, ...
+// Show all supported docker images under a DBMS (from old to new).
+// For example, if you use `ls mysql`, you will see mysql:5.5.40, mysql:5.5.41, ...
 //
-// We will collect release versions from the official download page of each DBMS:
-//   mysql: https://downloads.mysql.com/archives/community/
+// We will collect these images from the official dockerhub (mainly) of each DBMS:
+//   mysql: https://hub.docker.com/_/mysql/tags
+//          https://hub.docker.com/r/tommi2day/mysql4
 //   mariadb: todo
 //   tidb: todo
 //   oceanbase: todo
 //
-// (3) dbdeployer run dbms version port
+// (3) dbdeployer run dbms imageRepo:imageTag port
 //
-// Make sure you have `wget`, `docker`.
+// Make sure your linux user is in the user group `docker`, see:
+// https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
 //
-// We will run a docker container named qaqcatz-port-dbms-version on the specified port
-// with user `root`, password `123456` and a default database `qaqcatz`(we will wair for dbms ready).
+// We will run a docker container named test-port-dbms-imageTag on the specified port,
+// with user `root`, password `123456`, and wait it for ready.
 //
 // Note that:
-//
-//   1. If the container is running, we will do nothing;
+//   If the container is running, we will do nothing;
 //   If the container has exited, we will restart it;
-//   If the container does not exist, we will create it through `docker run`;
-//   If there is another running container with the prefix `qaqcatz-port`, we will stop it first.
-//   2. We will use `sudo` for docker command, make sure your linux user has root privilege.
-//   It is recommended to save your sudo password in ./sudoPassword.txt,
-//   we will read this file and automatically enter sudo password using pipeline.
-//   3. The docker container is created from a docker image named qaqcatz-dbms:version.
-//   If it does not exist, we will build it from ./download/dbms/version/Dockerfile.
-//   4. Some versions have the same installation process, they should share the same Dockerfile.
-//   So we prepared some meta Dockerfiles in ./dockerdb/dbms/metax/.
-//   x is the index of meta Dockerfiles.
-//   You can fetch the relationship between version and meta in ./db.json.
-//   5. Some Dockerfiles have the same environment, we should create a base image for them.
-//   So we prepared some environment Dockerfiles in ./dockerdb/dbms/envx,
-//   x is the index of env, and the image name is qaqcatz-dbms-env:envx.
-//   You can fetch the relationship between meta and env in .db.json.
-//   6.	When creating docker images, we will download some necessary files from the official download page
-//   and save them in ./download/dbms/version (if not exists).
+//   If the container does not exist, we will create it;
+//   If there is another running container with the prefix `test-port`, we will stop it first.
+//
+//
+// (4) bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+// Return the middle image between oldImage and newImage.
 func main() {
 	args := os.Args
 	if len(args) <= 1 {
@@ -144,8 +124,10 @@ func main() {
 		doLs(args)
 	case "run":
 		doRun(args)
+	case "bisect":
+		doBisect(args)
 	default:
-		panic("please use ls, run")
+		panic("please use ls, run, bisect")
 	}
 }
 
@@ -162,9 +144,9 @@ func doLs(args []string) {
 		if myDbms == nil {
 			panic("[doLs]can not find dbms " + specDbms)
 		}
-		fmt.Println(len(myDbms.Versions), "versions(old->new):")
-		for _, version := range myDbms.Versions {
-			fmt.Println(version.Name)
+		fmt.Println(len(myDbms.Images), "docker images(old->new):")
+		for _, image := range myDbms.Images {
+			fmt.Println(image.Repo+":"+image.Tag)
 		}
 	} else {
 		panic("[doLs]please use ls, ls dbms")
@@ -172,10 +154,6 @@ func doLs(args []string) {
 }
 
 func doRun(args []string) {
-	if len(args) <= 4 {
-		panic("[doRun]len(args) <= 4")
-	}
-
 	// create logger
 	logger := logrus.New()
 	logger.SetFormatter(&logrus.TextFormatter{
@@ -189,95 +167,50 @@ func doRun(args []string) {
 	logger.SetOutput(multiWriter)
 	logger.SetLevel(logrus.InfoLevel)
 
-	// 0. init
-	logger.Info("0. init")
+	logger.Info("1. init")
 	logger.Info("==================================================")
+
+	if len(args) <= 4 {
+		panic("[doRun]len(args) <= 4")
+	}
 	specDbms := args[2]
-	specVersion := args[3]
-	hostPort := args[4]
+	specImage := args[3]
+	specPort := args[4]
+
 	myDbms := findDBMS(specDbms)
 	if myDbms == nil {
 		panic("[doRun]can not find dbms " + specDbms)
 	}
-	user := myDbms.User
-	password := myDbms.Password
-	defaultDB := myDbms.DefaultDB
+	myImage := myDbms.findImage(specImage)
+	if myImage == nil {
+		panic("[doRun]can not find image " + specImage + " in " + specDbms)
+	}
+
+	extraDockerRun := myDbms.ExtraDockerRun
+	if myImage.ExtraDockerRun != "" {
+		extraDockerRun = myImage.ExtraDockerRun
+	}
+	waitForReady := myDbms.WaitForReady
+	if myImage.WaitForReady != "" {
+		waitForReady = myImage.WaitForReady
+	}
+	initDockerExecs := myDbms.InitDockerExecs
+	if len(myImage.InitDockerExecs) != 0 {
+		initDockerExecs = myImage.InitDockerExecs
+	}
 	containerPort := myDbms.Port
-	myVersion := myDbms.findVersion(specVersion)
-	if myVersion == nil {
-		panic("[doRun]can not find version " + specVersion + " in " + specDbms)
-	}
-	containerPrefix := gContainerPrefix+"-"+ hostPort
-	containerName := containerPrefix+"-"+specDbms+"-"+specVersion
-	imageRepo := gImagePrefix+"-"+specDbms
-	imageTag := specVersion
+	containerPrefix := gContainerPrefix+"-"+ specPort
+	containerName := containerPrefix+"-"+specDbms+"-"+myImage.Tag
 
-	metaPath := path.Join(gDockerDBPath, specDbms, myVersion.Meta)
-	metaDockerfile := path.Join(metaPath, "Dockerfile")
+	logger.Info("[DBMS] ", specDbms)
+	logger.Info("[Image] ", specImage)
+	logger.Info("[HostPort] ", specPort)
+	logger.Info("[ContainerPort] ", containerPort)
+	logger.Info("[ContainerName] ", containerName)
+	logger.Info("[User] ", gUser)
+	logger.Info("[Password] ", gPassword)
 
-	envImageRepo := gImagePrefix+"-"+specDbms+"-env"
-	envImageTag := myVersion.Env
-	envPath := path.Join(gDockerDBPath, specDbms, myVersion.Env)
-
-	versionPath := path.Join(gDownloadPath, specDbms, specVersion)
-	_ = os.MkdirAll(versionPath, 0777)
-
-	logger.Info("[containerName] ", containerName)
-	logger.Info("[imageRepo] ", imageRepo)
-	logger.Info("[imageTag] ", imageTag)
-	logger.Info("[metaPath] ", metaPath)
-	logger.Info("[envImageRepo] ", envImageRepo)
-	logger.Info("[envImageTag] ", envImageTag)
-	logger.Info("[envPath] ", envPath)
-	logger.Info("[versionPath] ", versionPath)
-	logger.Info("[user] ", user)
-	logger.Info("[password] ", password)
-	logger.Info("[hostPort] ", hostPort)
-	logger.Info("[containerPort] ", containerPort)
-
-	// 1. download if not exists
-	logger.Info("1. download")
-	logger.Info("==================================================")
-	for _, fileName := range myVersion.FileNames {
-		filePath := path.Join(versionPath, fileName)
-		if pathExists(filePath) {
-			logger.Info(fileName + " already exists")
-			continue
-		}
-		err := nanoshlib.ExecStd("cd " + versionPath + " && wget " + myVersion.UrlPrefix + fileName, -1)
-		if err != nil {
-			panic("[doRun] download error: " + err.Error())
-		}
-	}
-
-	// 2. prepare environment if not exists
-	logger.Info("2. prepare environment")
-	logger.Info("==================================================")
-	logger.Info("build ", envImageRepo, ":", envImageTag)
-	if !hasImage(envImageRepo, envImageTag) {
-		dockerBuild(envPath, envImageRepo, envImageTag)
-	} else {
-		logger.Info(envImageRepo + ":" + envImageTag + " already exists")
-	}
-
-	// 3. prepare meta dockerfile
-	logger.Info("3. prepare meta dockerfile")
-	logger.Info("==================================================")
-	logger.Info("cp " + metaDockerfile + " " + versionPath)
-	linuxCP(metaDockerfile, versionPath)
-
-	// 4. build image
-	logger.Info("4. build image")
-	logger.Info("==================================================")
-	logger.Info("build ", imageRepo, ":", imageTag)
-	if !hasImage(imageRepo, imageTag) {
-		dockerBuild(versionPath, imageRepo, imageTag)
-	} else {
-		logger.Info(imageRepo + ":" + imageTag + " already exists")
-	}
-
-	// 5. run container
-	logger.Info("5. run container")
+	logger.Info("2. run container")
 	logger.Info("==================================================")
 	status := containerStatus(containerName)
 	if status == 1 {
@@ -294,17 +227,17 @@ func doRun(args []string) {
 			dockerRestart(containerName)
 		} else {
 			logger.Info("create " + containerName)
-			dockerRun(imageRepo, imageTag, containerName, hostPort, containerPort)
+			dockerRun(specImage, containerName, specPort, strconv.Itoa(containerPort), extraDockerRun)
 		}
 
 		// wair for ready
 		ok := false
 		logger.Info("wait for ready")
-		for try := 1; try <= 16; try += 1 {
+		for try := 1; try <= gMaxReadyTry; try += 1 {
 			logger.Info("sleep 3s")
 			time.Sleep(3*time.Second)
 			logger.Info("try ", try)
-			err := IsStarted(hostPort, user, password, defaultDB)
+			err := dockerExec(containerName, waitForReady)
 			if err == nil {
 				ok = true
 				break
@@ -317,8 +250,54 @@ func doRun(args []string) {
 		} else {
 			panic("start dbms error!")
 		}
+
+		if status == -1 {
+			for _, initDockerExec := range initDockerExecs {
+				err := dockerExec(containerName, initDockerExec)
+				if err != nil {
+					panic("init dbms error: " + err.Error())
+				}
+			}
+		}
 	}
 
 	logger.Info("Finished!")
 }
 
+func doBisect(args []string) {
+	// bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+	if len(args) <= 4 {
+		panic("[doBisect]len(args) <= 4")
+	}
+	specDbms := args[2]
+	specOldImage := args[3]
+	specNewImage := args[4]
+
+	myDbms := findDBMS(specDbms)
+	if myDbms == nil {
+		panic("[doBisect]can not find dbms " + specDbms)
+	}
+
+	start := 0
+	for ; start < len(myDbms.Images); start += 1 {
+		if myDbms.Images[start].Repo+":"+myDbms.Images[start].Tag == specOldImage {
+			break
+		}
+	}
+	if start >= len(myDbms.Images) {
+		panic("[doBisect]can not find the oldImage " + specOldImage)
+	}
+
+	end := start
+	for ; end < len(myDbms.Images); end += 1 {
+		if myDbms.Images[end].Repo+":"+myDbms.Images[end].Tag == specNewImage {
+			break
+		}
+	}
+	if end >= len(myDbms.Images) {
+		panic("[doBisect]can not find the newImage " + specNewImage)
+	}
+
+	midId := (start+end)/2
+	fmt.Println(myDbms.Images[midId].Repo+":"+myDbms.Images[midId].Tag)
+}
