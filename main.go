@@ -10,6 +10,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"time"
 )
 
 const (
@@ -42,6 +43,7 @@ type DBMS struct {
 	User string `json:"user"`
 	Password string `json:"password"`
 	Port string `json:"port"`
+	DefaultDB string `json:"defaultDB"`
 	Versions []*Version `json:"versions"`
 	versionMap map[string]*Version // version name -> version
 }
@@ -109,7 +111,7 @@ func (dbms *DBMS) findVersion(specVersion string) *Version {
 // Make sure you have `wget`, `docker`.
 //
 // We will run a docker container named qaqcatz-port-dbms-version on the specified port
-// with user `root` and password `123456`.
+// with user `root`, password `123456` and a default database `qaqcatz`(we will wair for dbms ready).
 //
 // Note that:
 //
@@ -198,7 +200,8 @@ func doRun(args []string) {
 		panic("[doRun]can not find dbms " + specDbms)
 	}
 	user := myDbms.User
-	password := myDbms.Port
+	password := myDbms.Password
+	defaultDB := myDbms.DefaultDB
 	containerPort := myDbms.Port
 	myVersion := myDbms.findVersion(specVersion)
 	if myVersion == nil {
@@ -292,6 +295,27 @@ func doRun(args []string) {
 		} else {
 			logger.Info("create " + containerName)
 			dockerRun(imageRepo, imageTag, containerName, hostPort, containerPort)
+		}
+
+		// wair for ready
+		ok := false
+		logger.Info("wait for ready")
+		for try := 1; try <= 16; try += 1 {
+			logger.Info("sleep 3s")
+			time.Sleep(3*time.Second)
+			logger.Info("try ", try)
+			err := IsStarted(hostPort, user, password, defaultDB)
+			if err == nil {
+				ok = true
+				break
+			} else {
+				logger.Info("try error: ", err)
+			}
+		}
+		if ok {
+			logger.Info("dbms ready")
+		} else {
+			panic("start dbms error!")
 		}
 	}
 

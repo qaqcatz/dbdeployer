@@ -4,6 +4,7 @@
     "user": "root",
     "password": "123456",
     "port": "3306",
+    "defaultDB": "qaqcatz",
     "versions": [
       {
         "name": "5.0.15",
@@ -21,7 +22,7 @@
         "urlPrefix": "https://downloads.mysql.com/archives/get/p/23/file/",
         "fileNames": [
           "MySQL-server-5.0.16-0.glibc23.x86_64.rpm",
-          "MySQL-server-5.0.16-0.glibc23.x86_64.rpm",
+          "MySQL-client-5.0.16-0.glibc23.x86_64.rpm",
           "MySQL-shared-5.0.16-0.glibc23.x86_64.rpm"
         ],
         "meta": "meta1",

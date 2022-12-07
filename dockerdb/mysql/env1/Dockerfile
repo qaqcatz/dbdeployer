@@ -1,3 +1,6 @@
 FROM centos:centos7
 
-RUN yum -y install perl-DBI
+COPY init.sh /root
+
+RUN yum -y install perl-DBI \
+&& chmod 777 /root/init.sh

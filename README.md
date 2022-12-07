@@ -31,7 +31,7 @@ We will collect release versions from the official download page of each DBMS:
 Make sure you have `wget`, `docker`.
 
 We will run a docker container named `qaqcatz-port-dbms-version` on the specified port
-with user `root` and password `123456`.
+with user `root`, password `123456` and a default database `qaqcatz`(we will wait for dbms ready).
 
 Note that:
 
