@@ -92,7 +92,7 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 //
 // We will collect these images from the official dockerhub (mainly) of each DBMS:
 //   mysql: https://hub.docker.com/_/mysql/tags
-//          https://hub.docker.com/r/tommi2day/mysql4
+//          https://hub.docker.com/r/vettadock/mysql-old/tags
 //   mariadb: todo
 //   tidb: todo
 //   oceanbase: todo
@@ -103,16 +103,17 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 // https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
 //
 // We will run a docker container named test-port-dbms-imageTag on the specified port,
-// with user `root`, password `123456`, and wait it for ready.
+// with user `root`, password `123456`.
 //
 // Note that:
 //   If the container is running, we will do nothing;
 //   If the container has exited, we will restart it;
 //   If the container does not exist, we will create it;
 //   If there is another running container with the prefix `test-port`, we will stop it first.
-//
+//   We will wait for the dbms ready
 //
 // (4) bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+//
 // Return the middle image between oldImage and newImage.
 func main() {
 	args := os.Args
