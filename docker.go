@@ -6,6 +6,16 @@ import (
 	"strings"
 )
 
+func dockerPull(image string) error {
+	cmd := "docker pull " + image
+	fmt.Println(cmd)
+	err := nanoshlib.ExecStd(cmd, -1)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 // -1: not exists, 0: stop, 1: running
 func containerStatus(containerName string) int {
 	outStream, errStream, err := nanoshlib.Exec("docker ps " +

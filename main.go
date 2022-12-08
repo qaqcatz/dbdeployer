@@ -15,6 +15,7 @@ const (
 	gContainerPrefix string = "test"
 	gUser string = "root" // do not modify
 	gPassword string = "123456" // do not modify
+	gMaxPullTry int = 16
 	gMaxReadyTry int = 16
 )
 
@@ -243,6 +244,24 @@ func doRun(args []string) {
 			dockerRestart(containerName)
 		} else {
 			logger.Info("create " + containerName)
+			logger.Info("try to pull " + specImage)
+			ok := false
+			for try := 1; try <= gMaxPullTry; try += 1 {
+				logger.Info("try ", try)
+				err := dockerPull(specImage)
+				if err == nil {
+					ok = true
+					break
+				} else {
+					logger.Info("try error: ", err)
+				}
+			}
+			if ok {
+				logger.Info("pull " + specImage + " successfully!")
+			} else {
+				panic("pull " + specImage + " error!")
+			}
+
 			dockerRun(specImage, containerName, specPort, strconv.Itoa(containerPort), extraDockerRun)
 		}
 
