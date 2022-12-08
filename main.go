@@ -101,6 +101,10 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 //
 // Make sure your linux user is in the user group `docker`, see:
 // https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
+//    `cat /etc/group | grep docker`, if the group `docker` does not exist, `sudo groupadd docker`
+//    `sudo gpasswd -a $USER docker`
+//	   close the old terminal, start a new one, use `id` to check if your user is in the group `docker`
+//     now you can use `docker` without `sudo`.
 //
 // We will run a docker container named test-port-dbms-imageTag on the specified port,
 // with user `root`, password `123456`.

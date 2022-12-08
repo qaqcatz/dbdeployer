@@ -48,6 +48,11 @@ We will collect these images from the official dockerhub (mainly) of each DBMS:
 Make sure your linux user is in the user group `docker`, see:
 https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
 
+> 1. `cat /etc/group | grep docker`, if the group `docker` does not exist, `sudo groupadd docker`
+> 2. `sudo gpasswd -a $USER docker`
+> 3. close the old terminal, start a new one, use `id` to check if your user is in the group `docker`
+> 4. now you can use `docker` without `sudo`.
+
 We will run a docker container named `test-port-dbms-imageTag` on the specified port, with user `root`, password `123456`.
 
 Note that:
