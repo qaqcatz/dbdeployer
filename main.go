@@ -23,11 +23,6 @@ var (
 	gDBMSs []*DBMS = nil
 )
 
-func init() {
-	gDBJsonPath = "./db.json"
-	gDBMSs = readDBJson()
-}
-
 type DBMS struct {
 	Name string `json:"name"`
 	Port int `json:"port"`
@@ -117,7 +112,7 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 //   If there is another running container with the prefix `test-port`, we will stop it first.
 //   We will wait for the dbms ready
 //
-// (4) bisect [-cfg path of db.json] dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+// (4) dbdeployer [-cfg path of db.json] bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
 //
 // Return the middle image between oldImage and newImage.
 func main() {
@@ -125,6 +120,9 @@ func main() {
 	if len(args) <= 1 {
 		panic("len(args) <= 1")
 	}
+
+	gDBJsonPath = "./db.json"
+
 	// config
 	switch args[1] {
 	case "-cfg":
@@ -134,6 +132,8 @@ func main() {
 		gDBJsonPath = args[2]
 		args = args[2:]
 	}
+
+	gDBMSs = readDBJson()
 
 	switch args[1] {
 	case "ls":
