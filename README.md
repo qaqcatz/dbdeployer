@@ -12,13 +12,13 @@ go build
 ### ls
 
 ```shell
-./dbdeployer ls
+./dbdeployer [-cfg path of db.json] ls
 ```
 
 Show all supported DBMSs, such as mysql, mariadb, ...
 
 ```shell
-./dbdeployer ls dbms
+./dbdeployer [-cfg path of db.json] ls dbms
 ```
 
 Show all supported docker images under a DBMS (from old to new).
@@ -42,7 +42,7 @@ We will collect these images from the official dockerhub (mainly) of each DBMS:
 ### run
 
 ```shell
-./dbdeployer run dbms imageRepo:imageTag port
+./dbdeployer [-cfg path of db.json] run dbms imageRepo:imageTag port
 ```
 
 Make sure your linux user is in the user group `docker`, see:
@@ -66,7 +66,7 @@ Note that:
 ### bisect
 
 ```shell
-./dbdeployer bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+./dbdeployer [-cfg path of db.json] bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
 ```
 
 Return the middle image between oldImage and newImage.

@@ -12,7 +12,6 @@ import (
 )
 
 const (
-	gDBJsonPath string = "./db.json"
 	gContainerPrefix string = "test"
 	gUser string = "root" // do not modify
 	gPassword string = "123456" // do not modify
@@ -20,10 +19,12 @@ const (
 )
 
 var (
+	gDBJsonPath = ""
 	gDBMSs []*DBMS = nil
 )
 
 func init() {
+	gDBJsonPath = "./db.json"
 	gDBMSs = readDBJson()
 }
 
@@ -81,11 +82,11 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 	return nil
 }
 
-// (1) dbdeployer ls
+// (1) dbdeployer [-cfg path of db.json] ls
 //
 // Show all supported DBMSs, such as mysql, mariadb, ...
 //
-// (2) dbdeployer ls dbms
+// (2) dbdeployer [-cfg path of db.json] ls dbms
 //
 // Show all supported docker images under a DBMS (from old to new).
 // For example, if you use `ls mysql`, you will see mysql:5.5.40, mysql:5.5.41, ...
@@ -97,7 +98,7 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 //   tidb: todo
 //   oceanbase: todo
 //
-// (3) dbdeployer run dbms imageRepo:imageTag port
+// (3) dbdeployer [-cfg path of db.json] run dbms imageRepo:imageTag port
 //
 // Make sure your linux user is in the user group `docker`, see:
 // https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo
@@ -116,7 +117,7 @@ func (dbms *DBMS) findImage(specImage string) *Image {
 //   If there is another running container with the prefix `test-port`, we will stop it first.
 //   We will wait for the dbms ready
 //
-// (4) bisect dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
+// (4) bisect [-cfg path of db.json] dbms oldImageRepo:oldImageTag newImageRepo:newImageTag
 //
 // Return the middle image between oldImage and newImage.
 func main() {
@@ -124,6 +125,16 @@ func main() {
 	if len(args) <= 1 {
 		panic("len(args) <= 1")
 	}
+	// config
+	switch args[1] {
+	case "-cfg":
+		if len(args) <= 2 {
+			panic("len(args) <= 2")
+		}
+		gDBJsonPath = args[2]
+		args = args[2:]
+	}
+
 	switch args[1] {
 	case "ls":
 		doLs(args)
