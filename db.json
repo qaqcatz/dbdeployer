@@ -2,7 +2,7 @@
   {
     "name": "mysql",
     "port": 3306,
-    "extraDockerRun": "-e MYSQL_ROOT_PASSWORD=123456 --privileged=true",
+    "extraDockerRun": "-e MYSQL_ROOT_PASSWORD=123456",
     "waitForReady": "mysql -h 127.0.0.1 -u root --password=123456 -e \"SELECT 1\"",
     "images": [
       {
