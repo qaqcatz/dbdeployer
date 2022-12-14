@@ -518,931 +518,7 @@
     "images": [
       {
         "repo": "mariadb",
-        "tag": "10.10.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.9.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.9.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.9.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.8.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.8.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.8.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.8.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.8.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.7.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.9"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.8"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.6.0"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.18"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.13"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.12"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.9"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.8"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.5.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.27"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.26"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.25"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.24"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.22"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.21"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.20"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.19"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.18"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.14"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.13"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.12"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.8"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.4.0"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.37"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.36"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.35"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.34"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.32"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.31"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.30"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.29"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.28"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.27"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.26"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.25"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.24"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.23"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.22"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.21"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.20"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.19"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.18"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.14"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.13"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.12"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.9"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.8"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.4"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.0"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.44"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.43"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.41"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.40"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.39"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.38"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.37"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.36"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.35"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.34"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.33"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.32"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.31"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.30"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.29"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.27"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.26"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.25"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.24"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.23"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.22"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.21"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.20"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.19"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.18"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.14"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.13"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.12"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.9"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.8"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.7"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.6"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.2.5"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.48"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.47"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.46"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.45"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.44"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.43"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.41"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.40"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.39"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.38"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.37"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.36"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.35"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.34"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.33"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.32"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.31"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.30"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.29"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.28"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.26"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.25"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.24"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.23"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.22"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.21"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.20"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.19"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.18"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.14"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.13"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.12"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.11"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.10"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.2"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.1.1"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.38"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.38"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.37"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.36"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.35"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.34"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.33"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.32"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.31"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.30"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.29"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.28"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.27"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.26"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.25"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.24"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.23"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.22"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.21"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.20"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.19"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.17"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.16"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.0.15"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.64"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.63"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.62"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.61"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.60"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.59"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.58"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.57"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.56"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.55"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.54"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.53"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.52"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.51"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.50"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.49"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.48"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.47"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.46"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.45"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.44"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.43"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "5.5.42"
+        "tag": "5.5.40"
       },
       {
         "repo": "mariadb",
@@ -1450,7 +526,931 @@
       },
       {
         "repo": "mariadb",
-        "tag": "5.5.40"
+        "tag": "5.5.42"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.43"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.44"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.45"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.46"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.47"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.48"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.49"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.50"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.51"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.52"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.53"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.54"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.55"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.56"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.57"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.58"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.59"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.60"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.61"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.62"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.63"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "5.5.64"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.19"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.20"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.21"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.22"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.23"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.24"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.25"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.26"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.27"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.28"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.29"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.30"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.31"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.32"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.33"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.34"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.35"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.36"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.37"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.38"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.0.38"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.12"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.13"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.14"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.18"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.19"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.20"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.21"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.22"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.23"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.24"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.25"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.26"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.28"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.29"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.30"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.31"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.32"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.33"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.34"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.35"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.36"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.37"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.38"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.39"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.40"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.41"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.43"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.44"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.45"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.46"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.47"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.1.48"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.8"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.9"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.12"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.13"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.14"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.18"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.19"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.20"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.21"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.22"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.23"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.24"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.25"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.26"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.27"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.29"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.30"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.31"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.32"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.33"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.34"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.35"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.36"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.37"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.38"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.39"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.40"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.41"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.43"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.2.44"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.0"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.8"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.9"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.12"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.13"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.14"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.18"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.20"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.21"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.22"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.23"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.24"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.25"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.26"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.27"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.28"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.29"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.30"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.31"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.32"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.34"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.35"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.36"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.3.37"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.0"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.8"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.12"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.13"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.14"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.18"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.19"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.20"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.21"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.22"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.24"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.25"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.26"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.4.27"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.8"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.9"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.12"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.13"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.15"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.16"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.17"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.5.18"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.0"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.8"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.9"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.10"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.6.11"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.1"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.7.7"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.8.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.8.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.8.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.8.5"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.8.6"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.9.2"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.9.3"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.9.4"
+      },
+      {
+        "repo": "mariadb",
+        "tag": "10.10.2"
       }
     ]
   },
@@ -1465,459 +1465,7 @@
     "images": [
       {
         "repo": "pingcap/tidb",
-        "tag": "v6.4.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.3.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.2.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.1.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.1.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.1.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.1.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v6.0.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.4.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.4.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.4.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.4.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.3.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.3.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.3.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.3.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.2.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.2.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.2.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.2.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.2.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.1.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.1.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.1.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.1.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v5.0.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.16"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.15"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.14"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.13"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.12"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.11"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.10"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.9"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.8"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.7"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v4.0.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.1.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.1.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.1.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.20"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.19"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.18"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.17"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.16"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.16"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.15"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.14"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.13"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.12"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.11"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.10"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.9"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.8"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.7"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v3.0.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.19"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.18"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.17"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.16"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.15"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.14"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.13"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.12"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.11"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.10"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.9"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.8"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.7"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.1.0"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.11"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.10"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.9"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.8"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.7"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.2"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v2.0.1"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.8"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.7"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.6"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.5"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.4"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.3"
-      },
-      {
-        "repo": "pingcap/tidb",
-        "tag": "v1.0.2"
+        "tag": "v1.0.0"
       },
       {
         "repo": "pingcap/tidb",
@@ -1925,7 +1473,459 @@
       },
       {
         "repo": "pingcap/tidb",
-        "tag": "v1.0.0"
+        "tag": "v1.0.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.7"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v1.0.8"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.7"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.8"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.9"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.10"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.0.11"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.7"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.8"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.9"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.10"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.11"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.12"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.13"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.14"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.15"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.16"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.17"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.18"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v2.1.19"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.7"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.8"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.9"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.10"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.11"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.12"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.13"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.14"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.15"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.16"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.16"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.17"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.18"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.19"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.0.20"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.1.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.1.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v3.1.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.7"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.8"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.9"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.10"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.11"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.12"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.13"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.14"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.15"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v4.0.16"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.5"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.0.6"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.1.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.1.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.1.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.1.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.2.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.2.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.2.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.2.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.2.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.3.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.3.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.3.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.3.4"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.4.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.4.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.4.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v5.4.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.0.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.1.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.1.1"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.1.2"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.1.3"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.2.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.3.0"
+      },
+      {
+        "repo": "pingcap/tidb",
+        "tag": "v6.4.0"
       }
     ]
   }
