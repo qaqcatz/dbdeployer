@@ -1932,17 +1932,5 @@
         "tag": "v1.0.0"
       }
     ]
-  },
-  {
-    "name": "oceanbase",
-    "port": 2881,
-    "extraDockerRun": "",
-    "waitForReady": "mysql -h 127.0.0.1 -u root -e \"SELECT 1\"",
-    "initDockerExecs": [
-      "mysql -u root -e \"SET PASSWORD = PASSWORD('123456');\""
-    ],
-    "images": [
-
-    ]
   }
 ]
