@@ -1038,14 +1038,6 @@
       },
       {
         "repo": "mariadb",
-        "tag": "10.3.3"
-      },
-      {
-        "repo": "mariadb",
-        "tag": "10.3.4"
-      },
-      {
-        "repo": "mariadb",
         "tag": "10.3.5"
       },
       {
