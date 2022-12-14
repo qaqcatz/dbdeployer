@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/qaqcatz/nanoshlib"
 	"github.com/sirupsen/logrus"
 	"io"
 	"io/ioutil"
@@ -27,6 +28,7 @@ var (
 type DBMS struct {
 	Name string `json:"name"`
 	Port int `json:"port"`
+	UseExtClient bool `json:"useExtClient"`
 	ExtraDockerRun string `json:"extraDockerRun"`
 	WaitForReady string `json:"waitForReady"`
 	InitDockerExecs []string `json:"initDockerExecs"`
@@ -272,7 +274,12 @@ func doRun(args []string) {
 			logger.Info("sleep 3s")
 			time.Sleep(3*time.Second)
 			logger.Info("try ", try)
-			err := dockerExec(containerName, waitForReady)
+			var err error = nil
+			if !myDbms.UseExtClient {
+				err = dockerExec(containerName, waitForReady)
+			} else {
+				err = nanoshlib.ExecStd("mysql -P " + specPort + " " + waitForReady, -1)
+			}
 			if err == nil {
 				ok = true
 				break
@@ -286,11 +293,19 @@ func doRun(args []string) {
 			panic("start dbms error!")
 		}
 
+		fmt.Println(status)
 		if status == -1 {
 			for _, initDockerExec := range initDockerExecs {
-				err := dockerExec(containerName, initDockerExec)
+				var err error = nil
+				if !myDbms.UseExtClient {
+					err = dockerExec(containerName, initDockerExec)
+				} else {
+					err = nanoshlib.ExecStd("mysql -P " + specPort + " " + initDockerExec, -1)
+				}
 				if err != nil {
 					panic("init dbms error: " + err.Error())
+				} else {
+					logger.Infof("init dbms ok!")
 				}
 			}
 		}

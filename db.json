@@ -1441,10 +1441,11 @@
   {
     "name": "tidb",
     "port": 4000,
+    "useExtClient": true,
     "extraDockerRun": "",
-    "waitForReady": "mysql -h 127.0.0.1 -u root -e \"SELECT 1\"",
+    "waitForReady": "-h 127.0.0.1 -u root -e \"SELECT 1\"",
     "initDockerExecs": [
-      "mysql -u root -e \"SET PASSWORD = '123456';\""
+      "-h 127.0.0.1 -u root -e \"SET PASSWORD = '123456';\""
     ],
     "images": [
       {
