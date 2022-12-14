@@ -12,6 +12,8 @@ import (
 	"time"
 )
 
+// Note that: do not support tidb version before 3.0.11
+
 const (
 	gContainerPrefix string = "test"
 	gUser string = "root" // do not modify
@@ -31,6 +33,7 @@ type DBMS struct {
 	UseExtClient bool `json:"useExtClient"`
 	ExtraDockerRun string `json:"extraDockerRun"`
 	WaitForReady string `json:"waitForReady"`
+	WaitForRestart string `json:"waitForRestart"`
 	InitDockerExecs []string `json:"initDockerExecs"`
 	Images []*Image `json:"images"`
 	imageMap map[string]*Image // image repo:image tag -> *Image
@@ -213,6 +216,7 @@ func doRun(args []string) {
 	if myImage.WaitForReady != "" {
 		waitForReady = myImage.WaitForReady
 	}
+	waitForRestart := myDbms.WaitForRestart
 	initDockerExecs := myDbms.InitDockerExecs
 	if len(myImage.InitDockerExecs) != 0 {
 		initDockerExecs = myImage.InitDockerExecs
@@ -276,9 +280,17 @@ func doRun(args []string) {
 			logger.Info("try ", try)
 			var err error = nil
 			if !myDbms.UseExtClient {
-				err = dockerExec(containerName, waitForReady)
+				if status == 0 && waitForRestart != "" {
+					err = dockerExec(containerName, waitForRestart)
+				} else {
+					err = dockerExec(containerName, waitForReady)
+				}
 			} else {
-				err = nanoshlib.ExecStd("mysql -P " + specPort + " " + waitForReady, -1)
+				if status == 0 && waitForRestart != "" {
+					err = nanoshlib.ExecStd("mysql -P " + specPort + " " + waitForRestart, -1)
+				} else {
+					err = nanoshlib.ExecStd("mysql -P " + specPort + " " + waitForReady, -1)
+				}
 			}
 			if err == nil {
 				ok = true
